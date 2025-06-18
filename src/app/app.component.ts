@@ -1,9 +1,13 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
+import { AddproductComponent } from './pages/addproduct/addproduct.component';
+import { DeleteproductComponent } from './pages/deleteproduct/deleteproduct.component';
+import { EditproductComponent } from './pages/editproduct/editproduct.component';
+import { ViewallComponent } from './pages/viewall/viewall.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [ AddproductComponent ,DeleteproductComponent,EditproductComponent,ViewallComponent,RouterOutlet,RouterLink],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

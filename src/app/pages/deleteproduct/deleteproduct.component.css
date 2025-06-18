@@ -1,0 +1,13 @@
+.container {
+  max-width: 500px;
+}
+.card {
+  border-radius: 15px;
+}
+input.form-control {
+  border: 2px solid #dc3545;
+  border-radius: 10px;
+}
+button {
+  border-radius: 10px;
+}

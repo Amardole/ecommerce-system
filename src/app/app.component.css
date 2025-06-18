@@ -1,0 +1,22 @@
+.navbar-nav .nav-link {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  transition: transform 0.2s ease, color 0.2s ease;
+  color: white !important;
+}
+
+.navbar-nav .nav-link:hover {
+  transform: scale(1.1);
+  color: #fff; /* stays white */
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #007bff;
+  padding: 10px 20px;
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}

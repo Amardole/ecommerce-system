@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="card">
+    <h2 class="title">✏️ Update Product</h2>
+
+    <!-- Step 1: Product ID Entry -->
+    <div class="form-group" *ngIf="!product">
+      <label for="productId">Enter Product ID:</label>
+      <input type="number" [(ngModel)]="productId" id="productId" placeholder="Product ID" />
+      <button (click)="fetchProduct()">Fetch</button>
+    </div>
+
+    <!-- Step 2: Product Form -->
+    <form *ngIf="product" (ngSubmit)="updateProduct()" class="form">
+      <label>Name:</label>
+      <input type="text" [(ngModel)]="product.name" name="name" required />
+
+      <label>Description:</label>
+      <textarea [(ngModel)]="product.description" name="description" rows="3"></textarea>
+
+      <label>Price:</label>
+      <input type="number" [(ngModel)]="product.price" name="price" required />
+
+      <label>Quantity:</label>
+      <input type="number" [(ngModel)]="product.quantity" name="quantity" required />
+
+      <label>Image URL:</label>
+      <input type="text" [(ngModel)]="product.imgurl" name="imgurl" />
+
+      <button type="submit">Update Product</button>
+    </form>
+
+    <div class="success" *ngIf="successMsg">{{ successMsg }}</div>
+    <div class="error" *ngIf="errorMsg">{{ errorMsg }}</div>
+  </div>
+</div>

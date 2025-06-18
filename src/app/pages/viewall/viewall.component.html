@@ -1,0 +1,34 @@
+<div class="container mt-4">
+  <h2 class="text-center mb-4">All Products</h2>
+
+  <!-- Error Message -->
+  <div *ngIf="connectionError" class="alert alert-danger text-center fw-bold">
+    ❌ Unable to connect to backend. Please check your server connection.
+  </div>
+
+  <!-- Product List -->
+  <div *ngIf="!connectionError && products.length" class="row">
+    <div class="col-md-4 mb-4" *ngFor="let product of products">
+      <div class="card h-100 shadow-sm">
+        <img 
+          [src]="product.imgurl" 
+          class="card-img-top" 
+          alt="{{ product.name }}"
+          style="height: 200px; object-fit: contain;"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ product.name }}</h5>
+          <p class="card-text"><strong>ID:</strong> {{ product.id }}</p>
+          <p class="card-text"><strong>Price:</strong> ₹{{ product.price }}</p>
+          <p class="card-text"><strong>Quantity:</strong> {{ product.quantity }}</p>
+          <p class="card-text text-muted">{{ product.description || 'No description available.' }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- No Products Found -->
+  <div *ngIf="!connectionError && products.length === 0" class="text-center text-muted mt-4">
+    🛈 No products available to display.
+  </div>
+</div>

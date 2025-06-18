@@ -1,0 +1,36 @@
+<div class="container mt-5">
+  <div class="card shadow-lg p-4">
+    <h3 class="text-center text-danger mb-4">🗑️ Delete Product</h3>
+
+    <!-- ✅ Success Alert -->
+    <div *ngIf="showSuccess" class="alert alert-success slide-in mb-3">
+      {{ successMessage }}
+    </div>
+
+    <!-- ❌ Error Alert -->
+    <div *ngIf="showError" class="alert alert-danger slide-in mb-3">
+      {{ errorMessage }}
+    </div>
+
+    <div class="form-group mb-3">
+      <label for="productId" class="form-label">Enter Product ID</label>
+      <input
+        type="number"
+        id="productId"
+        class="form-control"
+        placeholder="e.g. 101"
+        [(ngModel)]="productId"
+        required
+      />
+    </div>
+
+    <div class="d-grid">
+      <button
+        class="btn btn-danger fw-semibold"
+        (click)="deleteProduct()"
+      >
+        Delete Product
+      </button>
+    </div>
+  </div>
+</div>
