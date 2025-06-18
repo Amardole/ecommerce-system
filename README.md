@@ -10,15 +10,7 @@ This is the frontend of the full-stack E-Commerce system built using Angular. It
 - Bootstrap (for styling)
 - RESTful API integration with Spring Boot backend
 
-📁 Folder Structure
--------------------
-frontend/
-├── src/
-│   ├── app/
-│   │   ├── pages/
-│   │   └── services/
-│   └── assets/
-└── angular.json
+![image](https://github.com/user-attachments/assets/6e98aa58-d724-4d2c-bd99-3009a8c7f616)
 
 🛠️ Setup Instructions
 ----------------------
