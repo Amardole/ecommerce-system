@@ -30,10 +30,13 @@ This is the backend REST API built using Spring Boot for managing products in th
 application.properties
 ----------------------
 spring.datasource.url=jdbc:postgresql://localhost:5432/ecommerce
+
 spring.datasource.username=postgres
+
 spring.datasource.password=your_password
 
 spring.jpa.hibernate.ddl-auto=update
+
 spring.jpa.show-sql=true
 
 server.port=8090
